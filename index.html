@@ -1,0 +1,2828 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Maycon Willian de Lima Santos">
+    <meta name="copyright" content="© 2026 Maycon Willian de Lima Santos. Todos os direitos reservados.">
+    <!-- Copyright © 2026 Maycon Willian de Lima Santos. Todos os direitos reservados. -->
+    <title>Painel de Cristalização - Injeção de Semente</title>
+    <meta name="theme-color" content="#0d3b66">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Cristalização">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" type="image/png" sizes="192x192" href="data:image/png;base64,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">
+    <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
+    <style>
+/*
+ * Painel de Cristalização - Injeção de Semente
+ * Copyright © 2026 Maycon Willian de Lima Santos. Todos os direitos reservados.
+ */
+
+:root {
+    --bg-color: #121212;
+    --panel-bg: #1e1e24;
+    --header-bg: #0d3b66;
+    --text-main: #e0e0e0;
+    --accent-blue: #4ea8de;
+    --alert-red: #d62828;
+    --ok-green: #2a9d8f;
+    --warn-orange: #f4a261;
+    --border-color: #333;
+    --gold: #e9c46a;
+    --brown: #a66a38;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    margin: 0;
+    padding: 10px;
+    min-height: 100vh;
+}
+
+/* Estado da zona: definido por data-zona no <body> pelo JavaScript */
+body[data-zona="subsaturada"] {
+    --zona: var(--warn-orange);
+    --zona-texto: #000;
+    --zona-bg: rgba(244, 162, 97, 0.1);
+}
+
+body[data-zona="metaestavel"] {
+    --zona: var(--ok-green);
+    --zona-texto: #fff;
+    --zona-bg: rgba(42, 157, 143, 0.1);
+}
+
+body[data-zona="labil"] {
+    --zona: var(--alert-red);
+    --zona-texto: #fff;
+    --zona-bg: rgba(214, 40, 40, 0.1);
+}
+
+/* ---------- Layout ---------- */
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    width: 100%;
+}
+
+@media (min-width: 1101px) {
+    body {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .dashboard {
+        grid-template-columns: 350px 1fr 380px;
+        height: 100%;
+    }
+}
+
+.panel {
+    background-color: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    min-height: 0;
+}
+
+.panel-header {
+    background-color: var(--header-bg);
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 14px;
+    border-bottom: 1px solid var(--border-color);
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.panel-content {
+    padding: 15px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+h4 {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: var(--accent-blue);
+    font-size: 12px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+/* ---------- Entradas ---------- */
+
+.input-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.input-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.input-group label {
+    font-size: 11px;
+    color: #aaa;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+}
+
+.input-group input[type="number"] {
+    width: 100%;
+    background-color: #2b2b36;
+    border: 1px solid #444;
+    color: #fff;
+    padding: 6px;
+    border-radius: 4px;
+    font-size: 13px;
+    transition: border-color 0.3s;
+}
+
+.input-group input[type="number"]:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+}
+
+.input-group input[type="range"] {
+    width: 100%;
+    margin-top: 4px;
+    accent-color: var(--accent-blue);
+    cursor: pointer;
+}
+
+/* ---------- Cozedor ---------- */
+
+.factory-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #1a1a20;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    position: relative;
+    padding: 58px 12px 10px;
+    min-height: 520px;
+    overflow-y: auto;
+}
+
+.grafico-central {
+    width: 100%;
+    margin-top: 12px;
+}
+
+.grafico-central h4 {
+    margin-top: 0;
+}
+
+.status-badge {
+    position: absolute;
+    top: 20px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    background-color: var(--zona, var(--ok-green));
+    color: var(--zona-texto, #fff);
+}
+
+.cozedor-container {
+    width: min(340px, 100%);
+    aspect-ratio: 380 / 450;
+    position: relative;
+    margin-top: 0;
+}
+
+.cozedor-container svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#liquid-mel,
+#liquid-xarope {
+    transition: y 0.3s ease, height 0.3s ease;
+}
+
+.bubble {
+    fill: rgba(255, 255, 255, 0.6);
+    animation: subirBolha 1.2s infinite ease-in;
+    opacity: 0;
+}
+
+@keyframes subirBolha {
+    0% { transform: translateY(0) scale(0.4); opacity: 0; }
+    30% { opacity: 0.8; }
+    100% { transform: translateY(-100px) scale(1.4); opacity: 0; }
+}
+
+.vapor-flow {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.6);
+    stroke-width: 2.5;
+    stroke-dasharray: 6 6;
+    animation: extrairVapor 0.8s linear infinite;
+}
+
+@keyframes extrairVapor {
+    to { stroke-dashoffset: -12; }
+}
+
+.formula-footer {
+    position: static;
+    margin-top: 10px;
+    font-size: 9px;
+    color: #777;
+    text-align: center;
+    line-height: 1.5;
+    padding: 0 10px;
+}
+
+/* ---------- Resultados ---------- */
+
+.result-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.result-box {
+    background-color: #2b2b36;
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    border: 1px solid #333;
+}
+
+.result-box.full {
+    grid-column: span 2;
+}
+
+.result-label {
+    font-size: 9px;
+    color: #aaa;
+    text-transform: uppercase;
+}
+
+.result-value {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+    color: var(--accent-blue);
+}
+
+.result-value.nivel-xarope { color: var(--gold); font-size: 16px; }
+.result-value.nivel-mel { color: var(--brown); font-size: 16px; }
+.result-value.inj { color: var(--zona, var(--ok-green)); font-size: 24px; }
+.result-value.sat { color: #fff; font-size: 14px; }
+
+.result-value.limites {
+    font-size: 11px;
+    color: #888;
+    margin-top: 4px;
+    font-weight: normal;
+}
+
+.alert-box {
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    line-height: 1.4;
+    margin-top: 10px;
+    border-left: 5px solid var(--zona, transparent);
+    background-color: var(--zona-bg, transparent);
+}
+
+#alerta-titulo {
+    color: var(--zona, var(--text-main));
+}
+
+/* ---------- Histórico e botões ---------- */
+
+.btn-action-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.btn-action-group button {
+    border: none;
+    padding: 9px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 11px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-transform: uppercase;
+}
+
+.btn-action-group button:focus-visible,
+.btn-clear:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+.btn-save {
+    background-color: var(--ok-green);
+    color: #fff;
+}
+
+.btn-save:hover {
+    background-color: #21867a;
+}
+
+.btn-export {
+    background-color: var(--accent-blue);
+    color: #000;
+}
+
+.btn-export:hover {
+    background-color: #3a86b8;
+}
+
+.btn-email {
+    background-color: var(--warn-orange);
+    color: #000;
+    grid-column: span 2;
+}
+
+.btn-email:hover {
+    background-color: #e08e45;
+}
+
+.header-historico {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+}
+
+.header-historico span {
+    font-size: 11px;
+    color: var(--accent-blue);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn-clear {
+    background: none;
+    border: none;
+    color: #aaa;
+    font-size: 11px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.btn-clear:hover {
+    color: var(--alert-red);
+}
+
+.historico-container {
+    margin-top: 10px;
+    border-top: 1px solid #333;
+    padding-top: 8px;
+    max-height: 130px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.historico-vazio {
+    text-align: center;
+    color: #666;
+    font-size: 10px;
+    padding: 5px;
+}
+
+.historico-item {
+    background-color: #2b2b36;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    border-left: 3px solid var(--accent-blue);
+    color: #ccc;
+    position: relative;
+}
+
+.historico-item strong {
+    color: #fff;
+    font-size: 11px;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.historico-resultados {
+    color: var(--accent-blue);
+    display: block;
+}
+
+.historico-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: var(--accent-blue);
+    color: #000;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+/* ---------- Ajustes para telas menores ---------- */
+
+@media (max-width: 1100px) {
+    .factory-view {
+        order: -1;
+    }
+}
+
+@media (max-width: 600px) {
+    .input-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .factory-view {
+        min-height: 460px;
+    }
+
+    .result-value.inj {
+        font-size: 20px;
+    }
+}
+
+/* ---------- Gráfico de evolução do Brix ---------- */
+.grafico-box {
+    background-color: #2b2b36;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 10px;
+    margin-top: 6px;
+}
+
+.grafico-box svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.grafico-legenda {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    justify-content: center;
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 6px;
+}
+
+.grafico-legenda-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.grafico-legenda-item i {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    display: inline-block;
+}
+/* ---------- Exclusão de registro e aviso ---------- */
+.historico-acoes {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 6px;
+    padding-top: 5px;
+    border-top: 1px solid #3a3a46;
+}
+
+.historico-excluir {
+    background: #3a2326;
+    border: 1px solid var(--alert-red);
+    color: #ffb3b3;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.historico-excluir:hover,
+.historico-excluir:focus-visible {
+    background: var(--alert-red);
+    color: #fff;
+    outline: none;
+}
+
+.historico-excluir.confirmar {
+    background: var(--alert-red);
+    border-color: var(--alert-red);
+    color: #fff;
+}
+
+.btn-clear.confirmar {
+    color: var(--alert-red);
+    font-weight: bold;
+}
+
+.aviso {
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%) translateY(20px);
+    background-color: #333;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 10;
+}
+
+.aviso.visivel {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+/* ---------- Armazenamento em arquivo ---------- */
+.btn-arquivo {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.btn-pasta {
+    background-color: #6c63ff;
+    color: #fff;
+}
+
+.btn-pasta:hover {
+    background-color: #5a52e0;
+}
+
+.btn-import {
+    background-color: #444;
+    color: #fff;
+}
+
+.btn-import:hover {
+    background-color: #555;
+}
+
+.status-arquivo {
+    font-size: 10px;
+    color: #aaa;
+    text-align: center;
+    margin-top: 8px;
+    line-height: 1.4;
+}
+/* ---------- Ampliar gráfico ---------- */
+.btn-ampliar {
+    display: block;
+    margin: 0 0 6px auto;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-ampliar:hover,
+.btn-ampliar:focus-visible {
+    background-color: var(--accent-blue);
+    color: #000;
+    outline: none;
+}
+
+.modal-grafico {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    z-index: 20;
+}
+
+.modal-grafico[hidden] {
+    display: none;
+}
+
+.modal-caixa {
+    background-color: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    width: min(900px, 100%);
+    max-height: 100%;
+    overflow: auto;
+    padding: 14px 16px;
+}
+
+.modal-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.btn-fechar {
+    background: none;
+    border: none;
+    color: #aaa;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 4px;
+}
+
+.btn-fechar:hover,
+.btn-fechar:focus-visible {
+    color: var(--alert-red);
+    outline: none;
+}
+/* ---------- Comparação mensal ---------- */
+.controles-mensais {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 12px;
+    color: #aaa;
+}
+
+.controles-mensais input[type="month"],
+.controles-mensais select {
+    background-color: #2b2b36;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 5px 8px;
+    font-size: 12px;
+}
+
+.controles-mensais .btn-ampliar {
+    margin: 0 0 0 auto;
+}
+
+.filtros-series {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.filtros-series label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    color: #ddd;
+}
+
+.filtros-series i {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    display: inline-block;
+}
+
+.legenda-meses {
+    font-size: 11px;
+    color: #aaa;
+    text-align: center;
+    margin-top: 4px;
+}
+
+.resumo-mensal {
+    margin-top: 10px;
+    overflow-x: auto;
+}
+
+.resumo-mensal table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+.resumo-mensal th,
+.resumo-mensal td {
+    border-bottom: 1px solid #333;
+    padding: 6px 8px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.resumo-mensal th:first-child,
+.resumo-mensal td:first-child {
+    text-align: left;
+}
+
+.resumo-mensal th {
+    color: var(--accent-blue);
+    font-weight: bold;
+}
+/* ---------- Registro da batelada ---------- */
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    background-color: #2b2b36;
+    border: 1px solid #444;
+    color: #fff;
+    padding: 6px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-family: inherit;
+}
+
+.input-group select:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+}
+
+.input-group textarea {
+    resize: vertical;
+}
+/* ---------- Cronômetros ---------- */
+.cronometros {
+    width: 100%;
+    max-width: 520px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.cron-config {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 6px 8px;
+    font-size: 12px;
+    color: #aaa;
+}
+
+.cron-config input {
+    width: 64px;
+    background-color: #2b2b36;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 4px 6px;
+    font-size: 12px;
+}
+
+.cron-bloco {
+    background-color: #2b2b36;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+}
+
+.cron-titulo {
+    font-size: 11px;
+    color: var(--accent-blue);
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.cron-tempo {
+    font-size: 34px;
+    font-weight: bold;
+    color: #fff;
+    font-variant-numeric: tabular-nums;
+    margin: 4px 0 8px;
+}
+
+.cron-acoes {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cron-btn {
+    border: none;
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cron-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.cron-btn:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+.cron-iniciar,
+.cron-ok {
+    background-color: var(--ok-green);
+    color: #fff;
+}
+
+.cron-cancelar {
+    background-color: #444;
+    color: #fff;
+}
+
+.cron-nao {
+    background-color: var(--alert-red);
+    color: #fff;
+}
+
+.cron-pergunta {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #fff;
+}
+
+.cron-pergunta > span {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.cron-bloco.alerta {
+    border-color: var(--warn-orange);
+    animation: piscarAlerta 1s infinite;
+}
+
+@keyframes piscarAlerta {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(244, 162, 97, 0); }
+    50% { box-shadow: 0 0 14px 3px rgba(244, 162, 97, 0.6); }
+}
+
+.cron-status {
+    grid-column: 1 / -1;
+    font-size: 12px;
+    color: var(--warn-orange);
+    text-align: center;
+    min-height: 16px;
+}
+
+@media (max-width: 600px) {
+    .cronometros {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+<body data-zona="metaestavel">
+
+    <div class="dashboard">
+
+        <!-- PAINEL ESQUERDO: ENTRADA DE DADOS -->
+        <div class="panel">
+            <div class="panel-header">Parâmetros e Set Points</div>
+            <div class="panel-content">
+
+                <h4>Análises de Laboratório (Xarope)</h4>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="pureza-xarope">Pureza Xarope (%)</label>
+                        <input type="number" id="pureza-xarope" value="82.61" step="0.01" min="0" max="100" inputmode="decimal">
+                        <input type="range" id="range-p-xarope" min="50" max="100" value="82.61" step="0.1" aria-label="Pureza do xarope (ajuste deslizante)">
+                    </div>
+                    <div class="input-group">
+                        <label for="brix-xarope">Brix Xarope (%)</label>
+                        <input type="number" id="brix-xarope" value="68.50" step="0.01" min="0" max="100" inputmode="decimal">
+                        <input type="range" id="range-b-xarope" min="40" max="90" value="68.50" step="0.1" aria-label="Brix do xarope (ajuste deslizante)">
+                    </div>
+                </div>
+
+                <h4>Análises de Laboratório (Mel)</h4>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="pureza-mel">Pureza Mel (%)</label>
+                        <input type="number" id="pureza-mel" value="74.56" step="0.01" min="0" max="100" inputmode="decimal">
+                        <input type="range" id="range-p-mel" min="40" max="90" value="74.56" step="0.1" aria-label="Pureza do mel (ajuste deslizante)">
+                    </div>
+                    <div class="input-group">
+                        <label for="brix-mel">Brix Mel (%)</label>
+                        <input type="number" id="brix-mel" value="73.25" step="0.01" min="0" max="100" inputmode="decimal">
+                        <input type="range" id="range-b-mel" min="50" max="95" value="73.25" step="0.1" aria-label="Brix do mel (ajuste deslizante)">
+                    </div>
+                </div>
+
+                <h4>Set Points & Operação</h4>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="sp-pureza">SP Pureza Mistura (%)</label>
+                        <input type="number" id="sp-pureza" value="75.00" step="0.01" min="0" max="100" inputmode="decimal">
+                        <input type="range" id="range-sp-p" min="50" max="95" value="75.00" step="0.1" aria-label="Set point de pureza da mistura (ajuste deslizante)">
+                    </div>
+                    <div class="input-group">
+                        <label for="sp-nivel">SP Nível Granagem (%)</label>
+                        <input type="number" id="sp-nivel" value="60.0" step="0.1" min="0" max="100" inputmode="decimal">
+                        <input type="range" id="range-sp-n" min="0" max="100" value="60" step="1" aria-label="Set point de nível de granagem (ajuste deslizante)">
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="temp-cozedor">Temp. Cozedor (°C)</label>
+                        <input type="number" id="temp-cozedor" value="70.0" step="0.1" min="0" max="120" inputmode="decimal">
+                        <input type="range" id="range-temp" min="50" max="90" value="70" step="0.5" aria-label="Temperatura do cozedor (ajuste deslizante)">
+                    </div>
+                    <div class="input-group">
+                        <label for="coef-ss">Coef. SS Alvo</label>
+                        <input type="number" id="coef-ss" value="1.25" step="0.01" min="0.5" max="2" inputmode="decimal">
+                        <input type="range" id="range-ss" min="0.8" max="1.5" value="1.25" step="0.01" aria-label="Coeficiente de supersaturação alvo (ajuste deslizante)">
+                    </div>
+                </div>
+                                <h4>Registro da batelada (cozimento)</h4>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="obs-brix-semeadura">Brix real da semeadura (%)</label>
+                        <input type="number" id="obs-brix-semeadura" step="0.01" min="0" max="100" inputmode="decimal" placeholder="ex.: 83,20">
+                    </div>
+                    <div class="input-group">
+                        <label for="obs-tempo-lavagem">Tempo de lavagem (min)</label>
+                        <input type="number" id="obs-tempo-lavagem" step="1" min="0" max="999" inputmode="numeric" placeholder="ex.: 40">
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="obs-lavagem-min">Lavagem: Brix mín. (%)</label>
+                        <input type="number" id="obs-lavagem-min" step="0.1" min="0" max="100" inputmode="decimal" placeholder="ex.: 82">
+                    </div>
+                    <div class="input-group">
+                        <label for="obs-lavagem-max">Lavagem: Brix máx. (%)</label>
+                        <input type="number" id="obs-lavagem-max" step="0.1" min="0" max="100" inputmode="decimal" placeholder="ex.: 84">
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="obs-semente-visivel">Semente visível após 2 min</label>
+                        <select id="obs-semente-visivel">
+                            <option value="">Não informado</option>
+                            <option value="sim">Sim</option>
+                            <option value="nao">Não</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="obs-definicao">Definição do cristal (1 a 5)</label>
+                        <select id="obs-definicao">
+                            <option value="">Não informado</option>
+                            <option value="1">1 · Ruim</option>
+                            <option value="2">2 · Fraca</option>
+                            <option value="3">3 · Regular</option>
+                            <option value="4">4 · Boa</option>
+                            <option value="5">5 · Excelente</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="obs-espontaneos">Cristais espontâneos</label>
+                        <input type="number" id="obs-espontaneos" step="1" min="0" max="999" inputmode="numeric" placeholder="ex.: 1">
+                    </div>
+                </div>
+                <div class="input-group" style="margin-bottom: 12px;">
+                    <label for="obs-notas">Observações</label>
+                    <textarea id="obs-notas" rows="2" maxlength="300" placeholder="Anote o que chamou atenção"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- ÁREA CENTRAL: COZEDOR ANIMADO -->
+        <div class="factory-view">
+            <div id="status-indicador" class="status-badge" role="status" aria-live="polite">
+                ZONA METAESTÁVEL
+            </div>
+
+            <section class="cronometros" aria-label="Cronômetros de semeadura e lavagem">
+                <div class="cron-bloco" id="cron-semeadura">
+                    <div class="cron-titulo">1 · Semeadura (feed fechado)</div>
+                    <div class="cron-tempo" id="cron-semeadura-tempo">02:00</div>
+                    <div class="cron-acoes">
+                        <button class="cron-btn cron-iniciar" id="btn-semeadura-iniciar" type="button">▶ Injetar semente</button>
+                        <button class="cron-btn cron-cancelar" id="btn-semeadura-cancelar" type="button" hidden>✕ Cancelar</button>
+                    </div>
+                    <div class="cron-pergunta" id="cron-pergunta" hidden>
+                        <span>Cristais visíveis?</span>
+                        <div class="cron-acoes">
+                            <button class="cron-btn cron-ok" id="btn-cristais-sim" type="button">✔ Sim, OK</button>
+                            <button class="cron-btn cron-nao" id="btn-cristais-nao" type="button">✖ Não</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cron-bloco" id="cron-lavagem">
+                    <div class="cron-titulo">2 · Lavagem (abrir água)</div>
+                    <div class="cron-tempo" id="cron-lavagem-tempo">45:00</div>
+                    <div class="cron-acoes">
+                        <button class="cron-btn cron-iniciar" id="btn-lavagem-iniciar" type="button" disabled>▶ Abrir água</button>
+                        <button class="cron-btn cron-cancelar" id="btn-lavagem-cancelar" type="button" hidden>✕ Cancelar</button>
+                    </div>
+                </div>
+
+                <div class="cron-config">
+                    <label for="cron-dur-semeadura">Semeadura (min)</label>
+                    <input type="number" id="cron-dur-semeadura" value="2" min="0.5" max="30" step="0.5" inputmode="decimal">
+                    <label for="cron-dur-lavagem">Lavagem (min)</label>
+                    <input type="number" id="cron-dur-lavagem" value="45" min="1" max="240" step="1" inputmode="numeric">
+                </div>
+                <div id="cron-status" class="cron-status" role="status" aria-live="assertive"></div>
+            </section>
+
+            <div class="cozedor-container">
+                <svg viewBox="0 0 280 320" role="img" aria-label="Ilustração do cozedor com níveis de xarope e mel">
+                    <path d="M 60 70 L 60 200 C 60 230 160 230 160 200 L 160 70 Z" fill="none" stroke="#666" stroke-width="3"/>
+                    <path d="M 40 70 L 180 70 L 160 45 L 60 45 Z" fill="#2b2b36" stroke="#555" stroke-width="2"/>
+                    <path d="M 90 45 L 90 25 L 130 25 L 130 45 Z" fill="#333" stroke="#555"/>
+
+                    <rect x="75" y="200" width="70" height="55" fill="#3a3a45" rx="3" stroke="#555" stroke-width="2"/>
+                    <line x1="90" y1="200" x2="90" y2="255" stroke="#555" stroke-width="1.5"/>
+                    <line x1="105" y1="200" x2="105" y2="255" stroke="#555" stroke-width="1.5"/>
+                    <line x1="120" y1="200" x2="120" y2="255" stroke="#555" stroke-width="1.5"/>
+                    <line x1="135" y1="200" x2="135" y2="255" stroke="#555" stroke-width="1.5"/>
+
+                    <rect x="100" y="255" width="20" height="12" fill="#222" stroke="#4ea8de" stroke-width="2"/>
+                    <circle cx="110" cy="261" r="3" fill="#4ea8de"/>
+
+                    <rect id="liquid-mel" x="62" y="160" width="96" height="40" fill="#a66a38" rx="2"/>
+                    <rect id="liquid-xarope" x="62" y="130" width="96" height="30" fill="#e9c46a" rx="2"/>
+
+                    <g id="bolhas">
+                        <circle class="bubble" cx="80" cy="190" r="3" style="animation-delay: 0s;"/>
+                        <circle class="bubble" cx="110" cy="195" r="4" style="animation-delay: 0.3s;"/>
+                        <circle class="bubble" cx="135" cy="185" r="3" style="animation-delay: 0.7s;"/>
+                        <circle class="bubble" cx="95" cy="190" r="4" style="animation-delay: 0.2s;"/>
+                    </g>
+
+                    <g id="sistema-condensador">
+                        <path d="M 160 55 L 195 55" fill="none" stroke="#777" stroke-width="8"/>
+                        <path d="M 160 55 L 195 55" class="vapor-flow"/>
+
+                        <rect x="195" y="45" width="16" height="20" fill="#444" stroke="#666" stroke-width="1"/>
+                        <line x1="203" y1="15" x2="203" y2="75" stroke="var(--ok-green)" stroke-width="3"/>
+                        <circle cx="203" cy="15" r="4" fill="var(--ok-green)"/>
+
+                        <path d="M 211 40 L 245 40 L 245 80 L 228 100 L 228 140 L 234 140 L 234 160 L 222 160 L 222 140 L 228 140 L 228 100 L 211 80 Z" fill="#444" stroke="#666" stroke-width="1.5"/>
+                        <path d="M 245 50 L 270 50" fill="none" stroke="#4ea8de" stroke-width="6"/>
+                        <polygon points="265,47 275,50 265,53" fill="#4ea8de"/>
+                    </g>
+
+                    <g transform="translate(5, 110)">
+                        <path d="M 20 10 L 40 10" stroke="#777" stroke-width="5"/>
+                        <polygon points="25,3 35,3 38,17 22,17" fill="#444" stroke="#666"/>
+                        <line x1="30" y1="3" x2="30" y2="-5" stroke="#e9c46a" stroke-width="2.5"/>
+                        <circle cx="30" cy="-5" r="3" fill="#e9c46a"/>
+                        <circle cx="30" cy="10" r="2" fill="var(--ok-green)"/>
+                        <text x="0" y="24" fill="#e9c46a" font-size="6" font-weight="bold">XAROPE</text>
+                    </g>
+
+                    <g transform="translate(5, 145)">
+                        <path d="M 20 10 L 40 10" stroke="#777" stroke-width="5"/>
+                        <polygon points="25,3 35,3 38,17 22,17" fill="#444" stroke="#666"/>
+                        <line x1="30" y1="3" x2="30" y2="-5" stroke="#4ea8de" stroke-width="2.5"/>
+                        <circle cx="30" cy="-5" r="3" fill="#4ea8de"/>
+                        <circle cx="30" cy="10" r="2" fill="var(--alert-red)"/>
+                        <text x="5" y="24" fill="#4ea8de" font-size="6" font-weight="bold">ÁGUA</text>
+                    </g>
+
+                    <g transform="translate(5, 180)">
+                        <path d="M 20 10 L 40 10" stroke="#777" stroke-width="5"/>
+                        <polygon points="25,3 35,3 38,17 22,17" fill="#444" stroke="#666"/>
+                        <line x1="30" y1="3" x2="30" y2="-5" stroke="#a66a38" stroke-width="2.5"/>
+                        <circle cx="30" cy="-5" r="3" fill="#a66a38"/>
+                        <circle cx="30" cy="10" r="2" fill="var(--ok-green)"/>
+                        <text x="8" y="24" fill="#a66a38" font-size="6" font-weight="bold">MEL</text>
+                    </g>
+
+                    <line x1="25" y1="70" x2="35" y2="70" stroke="#888" stroke-width="2"/>
+                    <text x="5" y="73" fill="#888" font-size="6">100%</text>
+                    <line x1="25" y1="135" x2="35" y2="135" stroke="#888" stroke-width="2"/>
+                    <text x="8" y="138" fill="#888" font-size="6">50%</text>
+                    <line x1="25" y1="200" x2="35" y2="200" stroke="#888" stroke-width="2"/>
+                    <text x="11" y="203" fill="#888" font-size="6">0%</text>
+                </svg>
+            </div>
+            <section class="grafico-central" aria-label="Comparação mensal das cristalizações">
+                <h4>Comparação mensal das cristalizações</h4>
+                <div class="controles-mensais">
+                    <label for="mes-principal">Mês</label>
+                    <input type="month" id="mes-principal">
+                    <label for="mes-comparacao">Comparar com</label>
+                    <select id="mes-comparacao">
+                        <option value="">Nenhum</option>
+                    </select>
+                    <button class="btn-ampliar" id="btn-ampliar-grafico" type="button">⛶ Ampliar</button>
+                </div>
+                <div id="filtros-series" class="filtros-series"></div>
+                <div id="grafico-mensal" class="grafico-box"></div>
+                <div id="resumo-mensal" class="resumo-mensal"></div>
+            </section>
+
+            <div class="formula-footer">
+                Fórmulas ativas: BrixSat, d(Bx) e Binj<br>
+                © 2026 Maycon Willian de Lima Santos. Todos os direitos reservados.
+            </div>
+        </div>
+
+        <!-- PAINEL DIREITO: RESULTADOS E HISTÓRICO -->
+        <div class="panel">
+            <div class="panel-header">Cálculos e Saturação</div>
+            <div class="panel-content">
+
+                <h4>Composição Granagem (Resultado)</h4>
+                <div class="result-grid">
+                    <div class="result-box">
+                        <div class="result-label">Nível Xarope</div>
+                        <div class="result-value nivel-xarope" id="res-nivel-xarope">-- %</div>
+                    </div>
+                    <div class="result-box">
+                        <div class="result-label">Nível Mel</div>
+                        <div class="result-value nivel-mel" id="res-nivel-mel">-- %</div>
+                    </div>
+                </div>
+
+                <h4>Coeficiente de Supersaturação</h4>
+                <div class="result-grid">
+                    <div class="result-box full" style="margin-bottom: 0;">
+                        <div class="result-label" style="font-size:10px;">SP Brix Injeção de Semente</div>
+                        <div class="result-value inj" id="res-brix-inj">-- %</div>
+                    </div>
+                    <div class="result-box">
+                        <div class="result-label">Brix Sat (SS = 1,0)</div>
+                        <div class="result-value sat" id="res-brix-sat">-- %</div>
+                    </div>
+                    <div class="result-box">
+                        <div class="result-label">Limites Inj (1,0 - 1,3)</div>
+                        <div class="result-value limites">
+                            Mín: <span id="res-limite-min">-- %</span><br>
+                            Máx: <span id="res-limite-max">-- %</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="alerta-box" class="alert-box" role="status" aria-live="polite">
+                    <strong id="alerta-titulo">Processando...</strong>
+                    <p id="alerta-texto" style="margin-top:3px; margin-bottom:0;">Aguardando dados.</p>
+                </div>
+
+                <!-- HISTÓRICO E AÇÕES -->
+                <div class="header-historico">
+                    <span id="titulo-historico">Cristalizações</span>
+                    <button class="btn-clear" id="btn-limpar" type="button">Limpar</button>
+                </div>
+
+                <div class="btn-action-group">
+                    <button class="btn-save" id="btn-salvar" type="button">💾 Salvar</button>
+                    <button class="btn-export" id="btn-csv" type="button">📥 CSV</button>
+                    <button class="btn-email" id="btn-email" type="button">📧 Enviar por E-mail</button>
+                </div>
+
+                <div class="btn-action-group btn-arquivo">
+                    <button class="btn-pasta" id="btn-pasta" type="button">📁 Pasta de dados</button>
+                    <button class="btn-export" id="btn-backup" type="button">⬇ Backup</button>
+                    <button class="btn-import" id="btn-importar" type="button">⬆ Importar</button>
+                </div>
+                <div id="status-arquivo" class="status-arquivo" role="status">Dados guardados neste navegador.</div>
+                <input type="file" id="input-importar" accept=".json,application/json" hidden>
+
+                <div id="historico-lista" class="historico-container"></div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="modal-grafico" class="modal-grafico" hidden>
+        <div class="modal-caixa" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+            <div class="modal-cabecalho">
+                <span id="modal-titulo">Comparação mensal das cristalizações</span>
+                <button class="btn-fechar" id="btn-fechar-grafico" type="button" aria-label="Fechar gráfico">✕</button>
+            </div>
+            <div id="modal-conteudo"></div>
+        </div>
+    </div>
+
+    <div id="aviso" class="aviso" role="status" aria-live="polite"></div>
+
+    <script>
+/*
+ * Painel de Cristalização - Injeção de Semente
+ * Copyright © 2026 Maycon Willian de Lima Santos. Todos os direitos reservados.
+ */
+'use strict';
+
+/* ==========================================================================
+   Constantes
+   ========================================================================== */
+
+const STORAGE_KEY = 'historicoCristalizacao_v2';
+const EMAIL_KEY = 'emailDestinoCristalizacao';
+const ALTURA_LIQUIDO_SVG = 140;
+const BASE_LIQUIDO_Y = 200;
+
+// Pares [campo numérico, controle deslizante] que devem permanecer sincronizados
+const PARES_SINCRONIZADOS = [
+    ['pureza-xarope', 'range-p-xarope'],
+    ['brix-xarope', 'range-b-xarope'],
+    ['pureza-mel', 'range-p-mel'],
+    ['brix-mel', 'range-b-mel'],
+    ['sp-pureza', 'range-sp-p'],
+    ['sp-nivel', 'range-sp-n'],
+    ['temp-cozedor', 'range-temp'],
+    ['coef-ss', 'range-ss'],
+];
+
+const ZONAS = {
+    subsaturada: {
+        badge: 'ZONA SUBSATURADA',
+        titulo: 'Abaixo da Saturação (SS < 1,00)',
+        texto: 'Risco de dissolução de cristais.',
+    },
+    metaestavel: {
+        badge: 'ZONA METAESTÁVEL',
+        titulo: 'Região de Sementeira Ideal',
+        texto: 'Dentro da zona metaestável.',
+    },
+    labil: {
+        badge: 'ZONA LÁBIL',
+        titulo: 'Acima da Saturação (SS > 1,30)',
+        texto: 'Risco severo de falso grão.',
+    },
+};
+
+const formatadorNumero = new Intl.NumberFormat('pt-BR', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+    useGrouping: false,
+});
+
+/* ==========================================================================
+   Utilitários
+   ========================================================================== */
+
+const el = (id) => document.getElementById(id);
+
+const clamp = (valor, min, max) => Math.min(max, Math.max(min, valor));
+
+/** Formata número em pt-BR com 2 casas. Retorna '--' para valores inválidos. */
+function fmt(n) {
+    return Number.isFinite(n) ? formatadorNumero.format(n) : '--';
+}
+
+function fmtPct(n) {
+    return Number.isFinite(n) ? `${fmt(n)} %` : '-- %';
+}
+
+function formatarData(iso) {
+    const data = new Date(iso);
+    return Number.isNaN(data.getTime()) ? '-' : data.toLocaleString('pt-BR');
+}
+
+/** Cria elemento com classe e texto. O texto é sempre inserido com textContent (seguro). */
+function criarEl(tag, classe, texto) {
+    const elemento = document.createElement(tag);
+    if (classe) elemento.className = classe;
+    if (texto !== undefined) elemento.textContent = texto;
+    return elemento;
+}
+
+/**
+ * Lê um campo numérico. Campos vazios ou inválidos viram 0,
+ * e o valor é limitado ao min/max definidos no próprio campo.
+ */
+function lerNumero(id) {
+    const campo = el(id);
+    const valor = parseFloat(campo.value);
+    if (!Number.isFinite(valor)) return 0;
+
+    const min = parseFloat(campo.min);
+    const max = parseFloat(campo.max);
+    let resultado = valor;
+    if (Number.isFinite(min)) resultado = Math.max(resultado, min);
+    if (Number.isFinite(max)) resultado = Math.min(resultado, max);
+    return resultado;
+}
+
+/* ==========================================================================
+   Modelo de cálculo
+   ========================================================================== */
+
+/** Densidade da solução (g/cm³) em função do Brix. */
+function densidadeBx(bx) {
+    return (0.000028 * bx * bx) + (0.002951 * bx) + 1.01037;
+}
+
+/** Brix de injeção para um dado coeficiente de supersaturação. */
+function calcularBrixInjecao(ss, brixSat) {
+    return (100 * ss * brixSat) / (100 + brixSat * (ss - 1));
+}
+
+function zonaPara(ss) {
+    if (ss < 1.0) return 'subsaturada';
+    if (ss <= 1.3) return 'metaestavel';
+    return 'labil';
+}
+
+/**
+ * Lê todas as entradas e calcula os resultados.
+ * Retorna { entrada, resultado } sem alterar a tela.
+ */
+function calcularEstado() {
+    const pXarope = lerNumero('pureza-xarope');
+    const bXarope = lerNumero('brix-xarope');
+    const pMel = lerNumero('pureza-mel');
+    const bMel = lerNumero('brix-mel');
+    const spPureza = lerNumero('sp-pureza');
+    const spNivel = lerNumero('sp-nivel');
+    const temp = lerNumero('temp-cozedor');
+    const ss = lerNumero('coef-ss');
+
+    // Pureza alvo limitada à faixa entre os dois méis/xaropes (balanço de pureza)
+    const pMax = Math.max(pMel, pXarope);
+    const pMin = Math.min(pMel, pXarope);
+    const pAlvo = clamp(spPureza, pMin, pMax);
+
+    // Frações de massa pela regra da alavanca
+    let ratioMel = 0;
+    let ratioXarope = 0;
+    if (pXarope !== pMel) {
+        const partesMel = Math.abs(pXarope - pAlvo);
+        const partesXarope = Math.abs(pAlvo - pMel);
+        const total = partesMel + partesXarope;
+        if (total > 0) {
+            ratioMel = partesMel / total;
+            ratioXarope = partesXarope / total;
+        }
+    }
+
+    // Conversão para volume, protegida contra divisão por zero
+    const dMel = densidadeBx(bMel);
+    const dXarope = densidadeBx(bXarope);
+    const coefMel = (dMel * bMel) > 0 ? ratioMel / (dMel * bMel) : 0;
+    const coefXarope = (dXarope * bXarope) > 0 ? ratioXarope / (dXarope * bXarope) : 0;
+    const coefTotal = coefMel + coefXarope;
+
+    const nivelMel = coefTotal > 0 ? spNivel * (coefMel / coefTotal) : 0;
+    const nivelXarope = coefTotal > 0 ? spNivel * (coefXarope / coefTotal) : 0;
+
+    // Saturação e limites de injeção
+    const brixSat = 80.0159 + (0.1792 * temp) - (0.171 * pAlvo);
+    const brixInj = calcularBrixInjecao(ss, brixSat);
+    const brixMin = calcularBrixInjecao(1.0, brixSat);
+    const brixMax = calcularBrixInjecao(1.3, brixSat);
+
+    return {
+        entrada: {
+            pXarope,
+            bXarope,
+            pMel,
+            bMel,
+            spPureza,
+            spNivel,
+            temp,
+            ss,
+        },
+        resultado: {
+            nivelXarope,
+            nivelMel,
+            brixSat,
+            brixInj,
+            brixMin,
+            brixMax,
+            zona: zonaPara(ss),
+        },
+    };
+}
+
+/* ==========================================================================
+   Interface
+   ========================================================================== */
+
+function desenharCozedor(nivelMel, nivelXarope) {
+    const hMel = (clamp(nivelMel, 0, 100) / 100) * ALTURA_LIQUIDO_SVG;
+    const hXarope = (clamp(nivelXarope, 0, 100) / 100) * ALTURA_LIQUIDO_SVG;
+
+    const liquidoMel = el('liquid-mel');
+    const liquidoXarope = el('liquid-xarope');
+
+    liquidoMel.setAttribute('height', hMel);
+    liquidoMel.setAttribute('y', BASE_LIQUIDO_Y - hMel);
+    liquidoXarope.setAttribute('height', hXarope);
+    liquidoXarope.setAttribute('y', BASE_LIQUIDO_Y - hMel - hXarope);
+}
+
+function aplicarZona(zona) {
+    const info = ZONAS[zona];
+    document.body.dataset.zona = zona;
+    el('status-indicador').textContent = info.badge;
+    el('alerta-titulo').textContent = info.titulo;
+    el('alerta-texto').textContent = info.texto;
+}
+
+function renderizarResultado(r) {
+    el('res-nivel-xarope').textContent = fmtPct(r.nivelXarope);
+    el('res-nivel-mel').textContent = fmtPct(r.nivelMel);
+    el('res-brix-sat').textContent = fmtPct(r.brixSat);
+    el('res-brix-inj').textContent = fmtPct(r.brixInj);
+    el('res-limite-min').textContent = fmtPct(r.brixMin);
+    el('res-limite-max').textContent = fmtPct(r.brixMax);
+
+    desenharCozedor(r.nivelMel, r.nivelXarope);
+    aplicarZona(r.zona);
+}
+
+/** Recalcula e atualiza a tela. Retorna o estado calculado. */
+function atualizar() {
+    const estado = calcularEstado();
+    renderizarResultado(estado.resultado);
+    return estado;
+}
+
+/* ==========================================================================
+   Histórico (localStorage)
+   ========================================================================== */
+
+function lerHistorico() {
+    try {
+        const dados = JSON.parse(localStorage.getItem(STORAGE_KEY));
+        return Array.isArray(dados) ? dados : [];
+    } catch (erro) {
+        return [];
+    }
+}
+
+function gravarHistorico(historico) {
+    try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(historico));
+    } catch (erro) {
+        alert('Não foi possível salvar no navegador (armazenamento cheio ou bloqueado).');
+    }
+    escreverNaPasta(historico);
+}
+
+function renderizarHistorico() {
+    const container = el('historico-lista');
+    container.replaceChildren();
+
+    const mes = el('mes-principal').value;
+    el('titulo-historico').textContent = mes ? `Cristalizações de ${mesCurto(mes)}` : 'Cristalizações';
+
+    // Somente o mês selecionado, mais recente primeiro. O índice original é mantido para exclusão.
+    const doMes = lerHistorico()
+        .map((registro, indice) => ({ registro, indice }))
+        .filter(({ registro }) => chaveMes(registro.data) === mes)
+        .sort((a, b) => new Date(b.registro.data) - new Date(a.registro.data));
+
+    if (doMes.length === 0) {
+        container.append(criarEl('div', 'historico-vazio', 'Nenhuma cristalização neste mês.'));
+    }
+
+    doMes.forEach(({ registro, indice }, posicao) => {
+        const e = registro.entrada || {};
+        const r = registro.resultado || {};
+        const dataTexto = formatarData(registro.data);
+
+        const item = criarEl('div', 'historico-item');
+        item.append(criarEl('div', 'historico-badge', String(doMes.length - posicao)));
+        const rotuloAuto = registro.auto ? ' · automático' : '';
+        item.append(criarEl('strong', null, `📅 ${dataTexto}${rotuloAuto}`));
+        item.append(criarEl('div', null,
+            `Xarope: ${fmt(e.pXarope)}%P / ${fmt(e.bXarope)}%Bx | Mel: ${fmt(e.pMel)}%P / ${fmt(e.bMel)}%Bx`));
+        item.append(criarEl('div', null,
+            `Alvo: ${fmt(e.spPureza)}% | Nível: ${fmt(e.spNivel)}% | T: ${fmt(e.temp)}°C | SS: ${fmt(e.ss)}`));
+        item.append(criarEl('div', 'historico-resultados',
+            `Nível Xarope: ${fmtPct(r.nivelXarope)} | Nível Mel: ${fmtPct(r.nivelMel)} | Brix Inj: ${fmtPct(r.brixInj)}`));
+
+        if (temObservacoes(registro.observacoes)) {
+            const o = registro.observacoes;
+            const traco = (valor, formatar) => (valor === null || valor === undefined ? '--' : formatar(valor));
+            const visivel = o.sementeVisivel === 'sim' ? 'sim' : o.sementeVisivel === 'nao' ? 'não' : '--';
+            item.append(criarEl('div', null,
+                `Semeadura: ${traco(o.brixSemeadura, fmt)}% Bx | Lavagem: ${traco(o.lavagemMin, fmt)}–${traco(o.lavagemMax, fmt)}% por ${traco(o.tempoLavagem, (v) => String(v))} min`));
+            item.append(criarEl('div', null,
+                `Semente visível: ${visivel} | Definição: ${traco(o.definicao, (v) => v + '/5')} | Espontâneos: ${traco(o.espontaneos, (v) => String(v))}`));
+            if (o.horaSemeadura) {
+                item.append(criarEl('div', null,
+                    `Horários: semeadura ${horaCurta(o.horaSemeadura)}${o.horaLavagem ? ' · lavagem ' + horaCurta(o.horaLavagem) : ''}`));
+            }
+            if (o.notas) {
+                item.append(criarEl('div', null, `Obs.: ${o.notas}`));
+            }
+        }
+
+        const acoes = criarEl('div', 'historico-acoes');
+        const botaoExcluir = criarEl('button', 'historico-excluir', '🗑 Excluir');
+        botaoExcluir.type = 'button';
+        botaoExcluir.title = `Excluir o registro de ${dataTexto}`;
+        botaoExcluir.setAttribute('aria-label', `Excluir o registro de ${dataTexto}`);
+        botaoExcluir.dataset.indice = String(indice);
+        acoes.append(botaoExcluir);
+        item.append(acoes);
+
+        container.append(item);
+    });
+
+    atualizarPainelMensal();
+}
+
+function salvarProcessoAtual() {
+    const { entrada, resultado } = atualizar();
+
+    const registro = {
+        data: new Date().toISOString(),
+        entrada,
+        observacoes: lerObservacoes(),
+        resultado: {
+            nivelXarope: resultado.nivelXarope,
+            nivelMel: resultado.nivelMel,
+            brixSat: resultado.brixSat,
+            brixInj: resultado.brixInj,
+        },
+    };
+
+    const historico = [registro, ...lerHistorico()];
+    gravarHistorico(historico);
+    renderizarHistorico();
+
+    const botao = el('btn-salvar');
+    botao.textContent = '✓ Salvo!';
+    setTimeout(() => { botao.textContent = '💾 Salvar'; }, 2000);
+}
+
+function limparHistorico() {
+    const botao = el('btn-limpar');
+    if (botao.dataset.confirmando !== 'sim') {
+        pedirConfirmacao(botao, 'Confirmar?', 'Limpar');
+        return;
+    }
+    gravarHistorico([]);
+    renderizarHistorico();
+    mostrarAviso('Histórico limpo');
+}
+
+/* ==========================================================================
+   Exportação e e-mail
+   ========================================================================== */
+
+/** Escapa um valor para CSV: aspas quando há separador, aspas ou quebra de linha. */
+function celulaCSV(valor) {
+    const texto = String(valor);
+    return /[;"\r\n]/.test(texto) ? `"${texto.replace(/"/g, '""')}"` : texto;
+}
+
+/** Colunas de observações para o CSV (vazias quando não informadas). */
+function colunasObservacoesCSV(obs) {
+    const o = normalizarObservacoes(obs);
+    const num = (v) => (v === null ? '' : fmt(v));
+    const inteiro = (v) => (v === null ? '' : String(v));
+    const visivel = o.sementeVisivel === 'sim' ? 'Sim' : o.sementeVisivel === 'nao' ? 'Não' : '';
+    return [
+        num(o.brixSemeadura),
+        num(o.lavagemMin),
+        num(o.lavagemMax),
+        inteiro(o.tempoLavagem),
+        visivel,
+        inteiro(o.definicao),
+        inteiro(o.espontaneos),
+        o.notas || '',
+    ];
+}
+
+function exportarCSV() {
+    const historico = lerHistorico();
+    if (historico.length === 0) {
+        alert('Não há dados no histórico para exportar.');
+        return;
+    }
+
+    const cabecalho = [
+        'Data/Hora',
+        'Pureza Xarope (%)',
+        'Brix Xarope (%)',
+        'Pureza Mel (%)',
+        'Brix Mel (%)',
+        'Pureza Alvo (%)',
+        'Nível Granagem (%)',
+        'Temperatura (°C)',
+        'Coef. SS',
+        'Nível Xarope Result (%)',
+        'Nível Mel Result (%)',
+        'Brix Injeção (%)',
+        'Brix Saturação (%)',
+        'Brix Real Semeadura (%)',
+        'Lavagem Brix Mín (%)',
+        'Lavagem Brix Máx (%)',
+        'Tempo Lavagem (min)',
+        'Semente Visível 2 min',
+        'Definição Cristal (1-5)',
+        'Cristais Espontâneos',
+        'Observações',
+    ];
+
+    const linhas = historico.map((registro) => {
+        const e = registro.entrada || {};
+        const r = registro.resultado || {};
+        return [
+            formatarData(registro.data),
+            fmt(e.pXarope),
+            fmt(e.bXarope),
+            fmt(e.pMel),
+            fmt(e.bMel),
+            fmt(e.spPureza),
+            fmt(e.spNivel),
+            fmt(e.temp),
+            fmt(e.ss),
+            fmt(r.nivelXarope),
+            fmt(r.nivelMel),
+            fmt(r.brixInj),
+            fmt(r.brixSat),
+            ...colunasObservacoesCSV(registro.observacoes),
+        ].map(celulaCSV).join(';');
+    });
+
+    // BOM UTF-8 para o Excel reconhecer os acentos; ponto e vírgula como separador (padrão pt-BR)
+    const conteudo = '\uFEFF' + [cabecalho.join(';'), ...linhas].join('\r\n') + '\r\n';
+    const blob = new Blob([conteudo], { type: 'text/csv;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'historico_cristalizacao.csv';
+    document.body.append(link);
+    link.click();
+    link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+function montarCorpoEmail(registro) {
+    const e = registro.entrada || {};
+    const r = registro.resultado || {};
+
+    return [
+        'Olá,',
+        '',
+        'Aqui estão os dados da última batelada de cristalização:',
+        '',
+        `Data/Hora: ${formatarData(registro.data)}`,
+        '----------------------------------------',
+        'PARÂMETROS DE ENTRADA:',
+        `- Xarope: Pureza ${fmt(e.pXarope)}% | Brix ${fmt(e.bXarope)}%`,
+        `- Mel: Pureza ${fmt(e.pMel)}% | Brix ${fmt(e.bMel)}%`,
+        `- Set Point Pureza Alvo: ${fmt(e.spPureza)}%`,
+        `- Set Point Nível Granagem: ${fmt(e.spNivel)}%`,
+        `- Temperatura do Cozedor: ${fmt(e.temp)} °C`,
+        `- Coeficiente SS Alvo: ${fmt(e.ss)}`,
+        '',
+        'RESULTADOS DA COMPOSIÇÃO:',
+        `- Nível Xarope Calculado: ${fmtPct(r.nivelXarope)}`,
+        `- Nível Mel Calculado: ${fmtPct(r.nivelMel)}`,
+        `- Brix de Injeção: ${fmtPct(r.brixInj)}`,
+        `- Brix de Saturação: ${fmtPct(r.brixSat)}`,
+        '',
+        ...(temObservacoes(registro.observacoes) ? [
+            '',
+            'OBSERVAÇÕES DA BATELADA:',
+            `- Brix real da semeadura: ${registro.observacoes.brixSemeadura === null ? '--' : fmt(registro.observacoes.brixSemeadura) + '%'}`,
+            `- Lavagem: ${registro.observacoes.lavagemMin === null ? '--' : fmt(registro.observacoes.lavagemMin)}% a ${registro.observacoes.lavagemMax === null ? '--' : fmt(registro.observacoes.lavagemMax)}%, por ${registro.observacoes.tempoLavagem === null ? '--' : registro.observacoes.tempoLavagem} min`,
+            `- Semente visível após 2 min: ${registro.observacoes.sementeVisivel === 'sim' ? 'Sim' : registro.observacoes.sementeVisivel === 'nao' ? 'Não' : '--'}`,
+            `- Definição do cristal: ${registro.observacoes.definicao === null ? '--' : registro.observacoes.definicao + '/5'}`,
+            `- Cristais espontâneos: ${registro.observacoes.espontaneos === null ? '--' : registro.observacoes.espontaneos}`,
+            ...(registro.observacoes.notas ? [`- Notas: ${registro.observacoes.notas}`] : []),
+        ] : []),
+        '',
+        'Relatório gerado pelo Painel de Supervisão Industrial.',
+    ].join('\n');
+}
+
+const LIMITE_URL_MAILTO = 1900;
+
+function enviarPorEmail() {
+    const historico = lerHistorico();
+    if (historico.length === 0) {
+        alert('Salve pelo menos uma batelada antes de enviar por e-mail.');
+        return;
+    }
+
+    const destino = (prompt('Digite o e-mail de destino:', localStorage.getItem(EMAIL_KEY) || '') || '').trim();
+    if (!destino) return;
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(destino)) {
+        alert('E-mail inválido. Verifique e tente novamente.');
+        return;
+    }
+    localStorage.setItem(EMAIL_KEY, destino);
+
+    const assunto = 'Relatório de Cristalização - Injeção de Semente';
+    let corpo = montarCorpoEmail(historico[0]);
+    let url = `mailto:${encodeURIComponent(destino)}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`;
+
+    // Se o link ficar longo demais para o cliente de e-mail, envia um corpo curto e baixa o CSV
+    if (url.length > LIMITE_URL_MAILTO) {
+        exportarCSV();
+        corpo = 'Olá,\n\nSegue em anexo o histórico de cristalização (CSV).\n\nRelatório gerado pelo Painel de Supervisão Industrial.';
+        url = `mailto:${encodeURIComponent(destino)}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`;
+        alert('O resumo ficou longo demais para o e-mail. O CSV foi baixado: anexe-o à mensagem.');
+    }
+
+    window.location.href = url;
+}
+
+/* ==========================================================================
+   Utilitário SVG
+   ========================================================================== */
+
+const SVG_NS = 'http://www.w3.org/2000/svg';
+
+function criarSvg(tag, atributos = {}) {
+    const node = document.createElementNS(SVG_NS, tag);
+    for (const [chave, valor] of Object.entries(atributos)) {
+        node.setAttribute(chave, valor);
+    }
+    return node;
+}
+
+/* ==========================================================================
+   Comparação mensal: gráfico, séries marcáveis e resumo
+   ========================================================================== */
+
+const SERIES_MENSAIS = [
+    { chave: 'pXarope', nome: 'Pureza Xarope', cor: '#e9c46a', eixo: 'esq', estilo: 'solida' },
+    { chave: 'pMel', nome: 'Pureza Mel', cor: '#d9965b', eixo: 'esq', estilo: 'solida' },
+    { chave: 'spPureza', nome: 'SP Pureza Mistura', cor: '#2a9d8f', eixo: 'esq', estilo: 'solida' },
+    { chave: 'bXarope', nome: 'Brix Xarope', cor: '#ffffff', eixo: 'esq', estilo: 'pontilhada' },
+    { chave: 'bMel', nome: 'Brix Mel', cor: '#b983ff', eixo: 'esq', estilo: 'pontilhada' },
+    { chave: 'ss', nome: 'SS Alvo', cor: '#4ea8de', eixo: 'dir', estilo: 'tracejada' },
+];
+
+/** 'AAAA-MM' a partir de uma data ISO (horário local). */
+function chaveMes(iso) {
+    const data = new Date(iso);
+    if (Number.isNaN(data.getTime())) return '';
+    return `${data.getFullYear()}-${String(data.getMonth() + 1).padStart(2, '0')}`;
+}
+
+function mesAtual() {
+    return chaveMes(new Date().toISOString());
+}
+
+/** 'AAAA-MM' -> 'MM/AAAA' para exibição. */
+function mesCurto(chave) {
+    return chave ? chave.split('-').reverse().join('/') : '';
+}
+
+function diasNoMes(chave) {
+    const [ano, mes] = chave.split('-').map(Number);
+    return new Date(ano, mes, 0).getDate();
+}
+
+/** Registros completos de um mês, em ordem cronológica. */
+function registrosDoMes(chave) {
+    if (!chave) return [];
+    return lerHistorico()
+        .filter((r) => r && r.entrada && chaveMes(r.data) === chave
+            && CAMPOS_ENTRADA.every((campo) => Number.isFinite(r.entrada[campo])))
+        .sort((a, b) => new Date(a.data) - new Date(b.data));
+}
+
+/** Posição horizontal (dia do mês). Cristalizações do mesmo dia são afastadas levemente. */
+function posicionarPontos(registros) {
+    const total = {};
+    registros.forEach((r) => {
+        const dia = new Date(r.data).getDate();
+        total[dia] = (total[dia] || 0) + 1;
+    });
+
+    const visto = {};
+    return registros.map((r) => {
+        const dia = new Date(r.data).getDate();
+        const ordem = visto[dia] || 0;
+        visto[dia] = ordem + 1;
+        return { registro: r, dia: dia + (ordem - (total[dia] - 1) / 2) * 0.22 };
+    });
+}
+
+function dominioEscala(valores, folgaMinima) {
+    let minimo = Math.min(...valores);
+    let maximo = Math.max(...valores);
+    if (maximo - minimo < folgaMinima * 2) {
+        const centro = (maximo + minimo) / 2;
+        minimo = centro - folgaMinima;
+        maximo = centro + folgaMinima;
+    }
+    const folga = (maximo - minimo) * 0.1;
+    return [minimo - folga, maximo + folga];
+}
+
+function seriesMarcadas() {
+    return SERIES_MENSAIS.filter((s) => el(`filtro-${s.chave}`).checked);
+}
+
+function mediaSerie(registros, chave) {
+    const valores = registros.map((r) => r.entrada[chave]).filter(Number.isFinite);
+    if (valores.length === 0) return NaN;
+    return valores.reduce((soma, v) => soma + v, 0) / valores.length;
+}
+
+function criarOption(valor, texto) {
+    const option = criarEl('option', null, texto);
+    option.value = valor;
+    return option;
+}
+
+/** Uma caixinha para cada série, todas marcadas no início. */
+function criarFiltrosSeries() {
+    const container = el('filtros-series');
+    container.replaceChildren();
+
+    SERIES_MENSAIS.forEach((s) => {
+        const label = criarEl('label');
+        const checkbox = criarEl('input');
+        checkbox.type = 'checkbox';
+        checkbox.id = `filtro-${s.chave}`;
+        checkbox.checked = true;
+        checkbox.addEventListener('change', atualizarPainelMensal);
+
+        const marca = criarEl('i');
+        marca.style.background = s.cor;
+        label.append(checkbox, marca, document.createTextNode(s.nome));
+        container.append(label);
+    });
+}
+
+/** Lista apenas os meses que têm cristalizações (exceto o mês principal). */
+function atualizarOpcoesComparacao() {
+    const select = el('mes-comparacao');
+    const anterior = select.value;
+    const mesPrincipal = el('mes-principal').value;
+
+    const meses = [...new Set(lerHistorico().map((r) => chaveMes(r.data)).filter(Boolean))]
+        .filter((mes) => mes !== mesPrincipal)
+        .sort()
+        .reverse();
+
+    select.replaceChildren(criarOption('', 'Nenhum'));
+    meses.forEach((mes) => select.append(criarOption(mes, mesCurto(mes))));
+    select.value = meses.includes(anterior) ? anterior : '';
+}
+
+function desenharGraficoMensal(container = el('grafico-mensal')) {
+    container.replaceChildren();
+
+    const mesA = el('mes-principal').value;
+    const mesB = el('mes-comparacao').value;
+    const regA = registrosDoMes(mesA);
+    const regB = registrosDoMes(mesB);
+
+    if (regA.length === 0 && regB.length === 0) {
+        container.append(criarEl('div', 'historico-vazio',
+            `Nenhuma cristalização em ${mesCurto(mesA)}.`));
+        return;
+    }
+
+    const series = seriesMarcadas();
+    if (series.length === 0) {
+        container.append(criarEl('div', 'historico-vazio',
+            'Marque ao menos uma série acima para ver o gráfico.'));
+        return;
+    }
+
+    // Tamanho real da área disponível, em pixels
+    const largura = Math.max(300, container.clientWidth || 340);
+    const grande = largura > 500;
+    const altura = Math.round(largura * (grande ? 0.55 : 0.72));
+    const fonte = grande ? 14 : 12;
+    const margem = { top: 16, right: 56, bottom: 30, left: 56 };
+    const areaL = largura - margem.left - margem.right;
+    const areaA = altura - margem.top - margem.bottom;
+
+    const maxDia = Math.max(diasNoMes(mesA), mesB ? diasNoMes(mesB) : 0);
+    const x = (dia) => margem.left + ((dia - 1) / (maxDia - 1)) * areaL;
+
+    const pontosA = posicionarPontos(regA);
+    const pontosB = posicionarPontos(regB);
+
+    const esq = series.filter((s) => s.eixo === 'esq');
+    const dir = series.filter((s) => s.eixo === 'dir');
+    const valoresDe = (registros, grupo) => grupo.flatMap((s) => registros.map((r) => r.entrada[s.chave]));
+
+    const escalaEsq = esq.length
+        ? dominioEscala([...valoresDe(regA, esq), ...valoresDe(regB, esq)], 1)
+        : null;
+    const escalaDir = dir.length
+        ? dominioEscala([...valoresDe(regA, dir), ...valoresDe(regB, dir)], 0.05)
+        : null;
+
+    const y = (valor, eixo) => {
+        const [minimo, maximo] = eixo === 'esq' ? escalaEsq : escalaDir;
+        return margem.top + areaA - ((valor - minimo) / (maximo - minimo)) * areaA;
+    };
+
+    const svg = criarSvg('svg', {
+        viewBox: `0 0 ${largura} ${altura}`,
+        role: 'img',
+        'aria-label': `Comparação mensal de ${mesCurto(mesA)}${mesB ? ' com ' + mesCurto(mesB) : ''}`,
+    });
+
+    // Grade e rótulos dos eixos
+    for (let k = 0; k <= 4; k++) {
+        const fracao = k / 4;
+        const posicao = margem.top + areaA - fracao * areaA;
+        svg.append(criarSvg('line', {
+            x1: margem.left, x2: largura - margem.right, y1: posicao, y2: posicao,
+            stroke: '#333', 'stroke-width': 1,
+        }));
+
+        if (escalaEsq) {
+            const [minimo, maximo] = escalaEsq;
+            const rotulo = criarSvg('text', {
+                x: margem.left - 6, y: posicao + 4, 'text-anchor': 'end', fill: '#e9c46a', 'font-size': fonte,
+            });
+            rotulo.textContent = fmt(minimo + fracao * (maximo - minimo));
+            svg.append(rotulo);
+        }
+        if (escalaDir) {
+            const [minimo, maximo] = escalaDir;
+            const rotulo = criarSvg('text', {
+                x: largura - margem.right + 6, y: posicao + 4, 'text-anchor': 'start', fill: '#4ea8de', 'font-size': fonte,
+            });
+            rotulo.textContent = fmt(minimo + fracao * (maximo - minimo));
+            svg.append(rotulo);
+        }
+    }
+
+    // Dias do mês no eixo horizontal
+    const dias = [...new Set([1, 5, 10, 15, 20, 25, maxDia])].filter((d) => d <= maxDia);
+    dias.forEach((dia) => {
+        const rotulo = criarSvg('text', {
+            x: x(dia), y: altura - margem.bottom + fonte + 6, 'text-anchor': 'middle', fill: '#888', 'font-size': fonte,
+        });
+        rotulo.textContent = String(dia);
+        svg.append(rotulo);
+    });
+
+    // Séries: primeiro o mês de comparação (atrás), depois o mês principal
+    const desenharSerie = (s, pontos, ehComparacao) => {
+        const atributos = {
+            points: pontos.map((p) => `${x(p.dia)},${y(p.registro.entrada[s.chave], s.eixo)}`).join(' '),
+            fill: 'none',
+            stroke: s.cor,
+            'stroke-width': grande ? 3 : 2.5,
+            'stroke-linejoin': 'round',
+        };
+        if (ehComparacao) {
+            atributos['stroke-dasharray'] = '4 4';
+            atributos['stroke-opacity'] = '0.55';
+        } else if (s.estilo === 'pontilhada') {
+            atributos['stroke-dasharray'] = '2 3';
+        } else if (s.estilo === 'tracejada') {
+            atributos['stroke-dasharray'] = '5 3';
+        }
+        svg.append(criarSvg('polyline', atributos));
+
+        pontos.forEach((p) => {
+            const valor = p.registro.entrada[s.chave];
+            const ponto = criarSvg('circle', {
+                cx: x(p.dia),
+                cy: y(valor, s.eixo),
+                r: grande ? 5 : 4,
+                fill: s.cor,
+                'fill-opacity': ehComparacao ? 0.55 : 1,
+            });
+            const titulo = criarSvg('title');
+            const dataTexto = new Date(p.registro.data).toLocaleDateString('pt-BR');
+            titulo.textContent = `${s.nome} (${dataTexto}): ${s.chave === 'ss' ? fmt(valor) : fmtPct(valor)}`;
+            ponto.append(titulo);
+            svg.append(ponto);
+        });
+    };
+
+    series.forEach((s) => {
+        if (pontosB.length) desenharSerie(s, pontosB, true);
+    });
+    series.forEach((s) => {
+        if (pontosA.length) desenharSerie(s, pontosA, false);
+    });
+
+    container.append(svg);
+
+    const legenda = criarEl('div', 'grafico-legenda');
+    series.forEach((s) => {
+        const item = criarEl('span', 'grafico-legenda-item');
+        const marca = criarEl('i');
+        marca.style.background = s.cor;
+        const sufixo = s.eixo === 'esq' ? ' (%)' : ' (eixo dir.)';
+        item.append(marca, document.createTextNode(s.nome + sufixo));
+        legenda.append(item);
+    });
+    container.append(legenda);
+
+    const notaMeses = criarEl('div', 'legenda-meses',
+        regA.length ? `Linha contínua: ${mesCurto(mesA)}` : `${mesCurto(mesA)}: sem dados`);
+    if (mesB) {
+        notaMeses.textContent += ` · Linha clara e tracejada: ${mesCurto(mesB)}`;
+    }
+    container.append(notaMeses);
+}
+
+/** Tabela com as médias do mês principal e, se houver, do mês de comparação. */
+function renderizarResumoMensal() {
+    const container = el('resumo-mensal');
+    container.replaceChildren();
+
+    const mesA = el('mes-principal').value;
+    const mesB = el('mes-comparacao').value;
+    const regA = registrosDoMes(mesA);
+    const regB = registrosDoMes(mesB);
+    if (regA.length === 0 && regB.length === 0) return;
+
+    const formatar = (serie, valor) => {
+        if (!Number.isFinite(valor)) return '--';
+        return serie.chave === 'ss' ? fmt(valor) : `${fmt(valor)} %`;
+    };
+
+    const tabela = criarEl('table');
+    const cabecalho = criarEl('tr');
+    const colunas = ['Série', `Média ${mesCurto(mesA)}`];
+    if (mesB) colunas.push(`Média ${mesCurto(mesB)}`, 'Diferença');
+    colunas.forEach((texto) => cabecalho.append(criarEl('th', null, texto)));
+
+    const cabecalhoTabela = criarEl('thead');
+    cabecalhoTabela.append(cabecalho);
+    const corpo = criarEl('tbody');
+    tabela.append(cabecalhoTabela, corpo);
+
+    SERIES_MENSAIS.forEach((s) => {
+        const linha = criarEl('tr');
+        const mediaA = mediaSerie(regA, s.chave);
+        linha.append(criarEl('td', null, s.nome), criarEl('td', null, formatar(s, mediaA)));
+
+        if (mesB) {
+            const mediaB = mediaSerie(regB, s.chave);
+            linha.append(criarEl('td', null, formatar(s, mediaB)));
+            const diferenca = mediaA - mediaB;
+            const textoDif = Number.isFinite(diferenca)
+                ? `${diferenca > 0 ? '+' : ''}${formatar(s, diferenca)}`
+                : '--';
+            linha.append(criarEl('td', null, textoDif));
+        }
+        corpo.append(linha);
+    });
+
+    container.append(tabela);
+}
+
+/** Atualiza tudo que depende do mês e das séries: lista de opções, gráfico e resumo. */
+function atualizarPainelMensal() {
+    atualizarOpcoesComparacao();
+    desenharGraficoMensal(el('grafico-mensal'));
+    renderizarResumoMensal();
+    if (!el('modal-grafico').hidden) {
+        desenharGraficoMensal(el('modal-conteudo'));
+    }
+}
+
+function vincularPainelMensal() {
+    el('mes-principal').value = el('mes-principal').value || mesAtual();
+    el('mes-principal').addEventListener('change', renderizarHistorico);
+    el('mes-comparacao').addEventListener('change', atualizarPainelMensal);
+    criarFiltrosSeries();
+}
+
+/* ==========================================================================
+   Registro da batelada (observações de cozimento e lavagem)
+   ========================================================================== */
+
+const CAMPOS_OBSERVACAO = ['brixSemeadura', 'lavagemMin', 'lavagemMax', 'tempoLavagem',
+    'sementeVisivel', 'definicao', 'espontaneos', 'notas', 'horaSemeadura', 'horaLavagem'];
+
+const IDS_OBSERVACAO = ['obs-brix-semeadura', 'obs-lavagem-min', 'obs-lavagem-max', 'obs-tempo-lavagem',
+    'obs-semente-visivel', 'obs-definicao', 'obs-espontaneos', 'obs-notas'];
+
+function lerObservacoes() {
+    const numero = (id) => {
+        const valor = parseFloat(el(id).value);
+        return Number.isFinite(valor) ? valor : null;
+    };
+    const definicao = el('obs-definicao').value;
+    return {
+        brixSemeadura: numero('obs-brix-semeadura'),
+        lavagemMin: numero('obs-lavagem-min'),
+        lavagemMax: numero('obs-lavagem-max'),
+        tempoLavagem: numero('obs-tempo-lavagem'),
+        sementeVisivel: el('obs-semente-visivel').value || null,
+        definicao: definicao ? Number(definicao) : null,
+        espontaneos: numero('obs-espontaneos'),
+        notas: el('obs-notas').value.trim() || null,
+        horaSemeadura: cronometros.horaSemeadura,
+        horaLavagem: cronometros.horaLavagem,
+    };
+}
+
+/** Normaliza para comparar registros antigos (sem observações) com os novos. */
+function normalizarObservacoes(obs) {
+    const base = {};
+    CAMPOS_OBSERVACAO.forEach((campo) => {
+        base[campo] = obs && obs[campo] !== undefined ? obs[campo] : null;
+    });
+    return base;
+}
+
+function observacoesIguais(a, b) {
+    return JSON.stringify(normalizarObservacoes(a)) === JSON.stringify(normalizarObservacoes(b));
+}
+
+function temObservacoes(obs) {
+    return !!obs && CAMPOS_OBSERVACAO.some((campo) => obs[campo] !== null && obs[campo] !== undefined);
+}
+
+function validarFaixaLavagem() {
+    const minimo = parseFloat(el('obs-lavagem-min').value);
+    const maximo = parseFloat(el('obs-lavagem-max').value);
+    if (Number.isFinite(minimo) && Number.isFinite(maximo) && minimo >= maximo) {
+        mostrarAviso('A faixa de lavagem: o mínimo deve ser menor que o máximo.');
+    }
+}
+
+function vincularObservacoes() {
+    IDS_OBSERVACAO.forEach((id) => {
+        const campo = el(id);
+        campo.addEventListener('input', agendarAutoSalvar);
+        campo.addEventListener('change', agendarAutoSalvar);
+    });
+    el('obs-lavagem-min').addEventListener('change', validarFaixaLavagem);
+    el('obs-lavagem-max').addEventListener('change', validarFaixaLavagem);
+}
+
+/* ==========================================================================
+   Salvamento automático, exclusão de registros e aviso
+   ========================================================================== */
+
+const TEMPO_AUTO_SALVAR_MS = 60000;
+const CAMPOS_ENTRADA = ['pXarope', 'bXarope', 'pMel', 'bMel', 'spPureza', 'spNivel', 'temp', 'ss'];
+let timerAutoSalvar = null;
+
+function entradasIguais(a = {}, b = {}) {
+    return CAMPOS_ENTRADA.every((campo) => Math.abs(a[campo] - b[campo]) < 1e-9);
+}
+
+function resumoResultado(resultado) {
+    return {
+        nivelXarope: resultado.nivelXarope,
+        nivelMel: resultado.nivelMel,
+        brixSat: resultado.brixSat,
+        brixInj: resultado.brixInj,
+    };
+}
+
+function mostrarAviso(texto) {
+    const aviso = el('aviso');
+    aviso.textContent = texto;
+    aviso.classList.add('visivel');
+    clearTimeout(mostrarAviso.timer);
+    mostrarAviso.timer = setTimeout(() => aviso.classList.remove('visivel'), 2500);
+}
+
+/**
+ * Salva o processo atual automaticamente.
+ * - Não salva se os valores forem iguais ao último registro.
+ * - Se o último registro também for automático, ele é substituído (evita lotar o histórico).
+ * - Registros salvos manualmente nunca são substituídos.
+ */
+function autoSalvar() {
+    const { entrada, resultado } = calcularEstado();
+    const historico = lerHistorico();
+    const ultimo = historico[0];
+
+    const observacoes = lerObservacoes();
+    if (ultimo && entradasIguais(ultimo.entrada, entrada)
+        && observacoesIguais(ultimo.observacoes, observacoes)) return;
+
+    const registro = {
+        data: new Date().toISOString(),
+        auto: true,
+        entrada,
+        observacoes,
+        resultado: resumoResultado(resultado),
+    };
+
+    const base = ultimo && ultimo.auto ? historico.slice(1) : historico;
+    gravarHistorico([registro, ...base]);
+    renderizarHistorico();
+    mostrarAviso('Salvo automaticamente');
+}
+
+/** Reinicia a contagem de 1 minuto sem alterações. */
+function agendarAutoSalvar() {
+    clearTimeout(timerAutoSalvar);
+    timerAutoSalvar = setTimeout(autoSalvar, TEMPO_AUTO_SALVAR_MS);
+}
+
+/** Chamado apenas quando o usuário altera um campo (não na carga da página). */
+function aoAlterarEntrada() {
+    atualizar();
+    agendarAutoSalvar();
+}
+
+/**
+ * Confirmação dentro da própria página (em dois cliques).
+ * Não usa confirm(), que pode ser bloqueado em visualizadores embutidos.
+ */
+function pedirConfirmacao(botao, textoConfirmar, textoOriginal) {
+    botao.dataset.confirmando = 'sim';
+    botao.textContent = textoConfirmar;
+    botao.classList.add('confirmar');
+    setTimeout(() => {
+        if (botao.dataset.confirmando === 'sim') {
+            botao.dataset.confirmando = '';
+            botao.textContent = textoOriginal;
+            botao.classList.remove('confirmar');
+        }
+    }, 4000);
+}
+
+/** Remove somente o registro indicado, mantendo os demais. */
+function excluirRegistro(indice) {
+    const historico = lerHistorico();
+    if (!historico[indice]) return;
+
+    historico.splice(indice, 1);
+    gravarHistorico(historico);
+    renderizarHistorico();
+    mostrarAviso('Registro excluído');
+}
+
+/* ==========================================================================
+   Armazenamento em arquivo (pasta escolhida pelo usuário) e backup
+   ========================================================================== */
+
+const ARQUIVO_DADOS = 'historico_cristalizacao.json';
+const SUPORTA_PASTA = typeof window.showDirectoryPicker === 'function';
+let pastaDados = null;
+let filaGravacao = Promise.resolve();
+
+function atualizarStatusArquivo(texto) {
+    el('status-arquivo').textContent = texto;
+}
+
+/** Conteúdo do arquivo (usado na pasta e no backup). */
+function montarBackup(historico) {
+    return JSON.stringify({
+        app: 'cristalizacao-injecao-semente',
+        versao: 2,
+        salvoEm: new Date().toISOString(),
+        registros: historico,
+    }, null, 2);
+}
+
+/** Lê e valida um arquivo. Lança erro se o conteúdo for inválido. */
+function lerBackup(texto) {
+    const dados = JSON.parse(texto);
+    const registros = dados && Array.isArray(dados.registros) ? dados.registros : null;
+    if (!registros) {
+        throw new Error('o arquivo não contém registros válidos.');
+    }
+    return registros.filter((r) => r && r.entrada && r.resultado);
+}
+
+/** Grava o histórico no arquivo da pasta. As escritas entram em fila para não se sobreporem. */
+function escreverNaPasta(historico) {
+    filaGravacao = filaGravacao.then(async () => {
+        if (!pastaDados) return;
+        try {
+            if (await pastaDados.queryPermission({ mode: 'readwrite' }) !== 'granted') {
+                atualizarStatusArquivo('Pasta desconectada. Clique em "📁 Pasta de dados" para reconectar.');
+                return;
+            }
+            const arquivo = await pastaDados.getFileHandle(ARQUIVO_DADOS, { create: true });
+            const escrita = await arquivo.createWritable();
+            await escrita.write(montarBackup(historico));
+            await escrita.close();
+            atualizarStatusArquivo(`Salvo em: ${pastaDados.name}/${ARQUIVO_DADOS}`);
+        } catch (erro) {
+            atualizarStatusArquivo('Erro ao gravar na pasta: ' + erro.message);
+        }
+    });
+    return filaGravacao;
+}
+
+/** Carrega o arquivo da pasta para o navegador. Se ainda não existir, cria-o com os dados atuais. */
+async function carregarDaPasta() {
+    try {
+        const arquivo = await (await pastaDados.getFileHandle(ARQUIVO_DADOS)).getFile();
+        const registros = lerBackup(await arquivo.text());
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(registros));
+        renderizarHistorico();
+        atualizarStatusArquivo(`Dados carregados de: ${pastaDados.name}/${ARQUIVO_DADOS}`);
+    } catch (erro) {
+        if (erro.name === 'NotFoundError') {
+            atualizarStatusArquivo(`Pasta conectada: ${pastaDados.name}. O arquivo será criado ao salvar.`);
+            await escreverNaPasta(lerHistorico());
+        } else {
+            atualizarStatusArquivo('Erro ao ler o arquivo: ' + erro.message);
+        }
+    }
+}
+
+/* A referência à pasta é guardada em IndexedDB, que aceita esse tipo de dado. */
+function abrirBancoConfig() {
+    return new Promise((resolve, reject) => {
+        const req = indexedDB.open('cristalizacao-config', 1);
+        req.onupgradeneeded = () => req.result.createObjectStore('config');
+        req.onsuccess = () => resolve(req.result);
+        req.onerror = () => reject(req.error);
+    });
+}
+
+async function salvarReferenciaPasta(handle) {
+    const db = await abrirBancoConfig();
+    await new Promise((resolve, reject) => {
+        const tx = db.transaction('config', 'readwrite');
+        tx.objectStore('config').put(handle, 'pasta');
+        tx.oncomplete = resolve;
+        tx.onerror = () => reject(tx.error);
+    });
+    db.close();
+}
+
+async function carregarReferenciaPasta() {
+    const db = await abrirBancoConfig();
+    const handle = await new Promise((resolve, reject) => {
+        const req = db.transaction('config').objectStore('config').get('pasta');
+        req.onsuccess = () => resolve(req.result || null);
+        req.onerror = () => reject(req.error);
+    });
+    db.close();
+    return handle;
+}
+
+/** Botão "Pasta de dados": escolhe a pasta na primeira vez e reconecta depois. */
+async function conectarPasta() {
+    if (!SUPORTA_PASTA) {
+        mostrarAviso('Seu navegador não permite gravar em pasta. Use Backup e Importar.');
+        return;
+    }
+    try {
+        if (!pastaDados) {
+            pastaDados = await window.showDirectoryPicker({ mode: 'readwrite', id: 'cristalizacao' });
+            await salvarReferenciaPasta(pastaDados);
+        } else if (await pastaDados.requestPermission({ mode: 'readwrite' }) !== 'granted') {
+            atualizarStatusArquivo('Permissão negada para a pasta.');
+            return;
+        }
+        await carregarDaPasta();
+        mostrarAviso('Pasta de dados conectada');
+    } catch (erro) {
+        if (erro.name !== 'AbortError') {
+            atualizarStatusArquivo('Não foi possível conectar a pasta: ' + erro.message);
+        }
+    }
+}
+
+/** Ao abrir a página: usa a pasta lembrada, se houver. */
+async function iniciarArmazenamento() {
+    if (!SUPORTA_PASTA) {
+        el('btn-pasta').hidden = true;
+        atualizarStatusArquivo('Dados guardados neste navegador. Use ⬇ Backup para guardar em arquivo.');
+        return;
+    }
+    try {
+        const handle = await carregarReferenciaPasta();
+        if (!handle) {
+            atualizarStatusArquivo('Dados guardados neste navegador. Escolha uma pasta para salvar em arquivo.');
+            return;
+        }
+        pastaDados = handle;
+        if (await handle.queryPermission({ mode: 'readwrite' }) === 'granted') {
+            await carregarDaPasta();
+        } else {
+            atualizarStatusArquivo(`Clique em "📁 Pasta de dados" para reconectar: ${handle.name}`);
+        }
+    } catch (erro) {
+        atualizarStatusArquivo('Armazenamento em pasta indisponível: ' + erro.message);
+    }
+}
+
+/* ----- Backup portátil (funciona em qualquer navegador) ----- */
+
+function baixarBlob(blob, nomeArquivo) {
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = nomeArquivo;
+    document.body.append(link);
+    link.click();
+    link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+function exportarBackup() {
+    const historico = lerHistorico();
+    if (historico.length === 0) {
+        mostrarAviso('Não há dados para exportar.');
+        return;
+    }
+    const data = new Date().toISOString().slice(0, 10);
+    baixarBlob(new Blob([montarBackup(historico)], { type: 'application/json' }),
+        `backup_cristalizacao_${data}.json`);
+}
+
+/** Importa um backup e substitui o histórico atual pelos registros do arquivo. */
+async function importarBackup(evento) {
+    const arquivo = evento.target.files[0];
+    evento.target.value = '';
+    if (!arquivo) return;
+
+    try {
+        const registros = lerBackup(await arquivo.text());
+        gravarHistorico(registros);
+        renderizarHistorico();
+        mostrarAviso(`${registros.length} registro(s) importado(s)`);
+    } catch (erro) {
+        mostrarAviso('Não foi possível importar: ' + erro.message);
+    }
+}
+
+/* ==========================================================================
+   Ampliar gráfico
+   ========================================================================== */
+
+function atualizarGraficos() {
+    desenharGraficoMensal(el('grafico-mensal'));
+    if (!el('modal-grafico').hidden) {
+        desenharGraficoMensal(el('modal-conteudo'));
+    }
+}
+
+function abrirModalGrafico() {
+    el('modal-grafico').hidden = false;
+    desenharGraficoMensal(el('modal-conteudo'));
+    el('btn-fechar-grafico').focus();
+}
+
+function fecharModalGrafico() {
+    el('modal-grafico').hidden = true;
+    el('modal-conteudo').replaceChildren();
+    el('btn-ampliar-grafico').focus();
+}
+
+function vincularModalGrafico() {
+    el('btn-ampliar-grafico').addEventListener('click', abrirModalGrafico);
+    el('btn-fechar-grafico').addEventListener('click', fecharModalGrafico);
+    el('modal-grafico').addEventListener('click', (evento) => {
+        if (evento.target === el('modal-grafico')) fecharModalGrafico();
+    });
+    document.addEventListener('keydown', (evento) => {
+        if (evento.key === 'Escape' && !el('modal-grafico').hidden) fecharModalGrafico();
+    });
+
+    let timerRedimensionar = null;
+    window.addEventListener('resize', () => {
+        clearTimeout(timerRedimensionar);
+        timerRedimensionar = setTimeout(atualizarGraficos, 150);
+    });
+}
+
+/* ==========================================================================
+   Cronômetros de semeadura e lavagem
+   ========================================================================== */
+
+const CHAVE_CRONOMETROS = 'cronometrosCristalizacao';
+
+/*
+ * semeadura.estado: 'parado' | 'contando' | 'aguardando' (pergunta) | 'confirmada'
+ * lavagem.estado:   'parado' | 'contando' | 'concluido'
+ * Os alvos são horários absolutos (Date.now), então a contagem continua certa mesmo se a tela bloquear.
+ */
+let cronometros = {
+    semeadura: { estado: 'parado', alvo: 0 },
+    lavagem: { estado: 'parado', alvo: 0, inicio: 0, duracaoMin: 0 },
+    horaSemeadura: null,
+    horaLavagem: null,
+};
+let contextoAudio = null;
+let alarmeSemeaduraTocado = false;
+let alarmeLavagemTocado = false;
+
+function salvarCronometros() {
+    try {
+        localStorage.setItem(CHAVE_CRONOMETROS, JSON.stringify(cronometros));
+    } catch (erro) {
+        // Sem armazenamento, os cronômetros continuam funcionando na sessão atual
+    }
+}
+
+function carregarCronometros() {
+    try {
+        const dados = JSON.parse(localStorage.getItem(CHAVE_CRONOMETROS));
+        if (dados && dados.semeadura && dados.lavagem) {
+            cronometros = dados;
+        }
+    } catch (erro) {
+        // Dados inválidos: começa do zero
+    }
+}
+
+function duracaoConfigurada(id, padrao) {
+    const valor = parseFloat(el(id).value);
+    return Number.isFinite(valor) && valor > 0 ? valor : padrao;
+}
+
+/** Libera o áudio dentro de um clique do operador (exigência dos navegadores). */
+function garantirAudio() {
+    try {
+        contextoAudio = contextoAudio || new (window.AudioContext || window.webkitAudioContext)();
+        if (contextoAudio.state === 'suspended') contextoAudio.resume();
+    } catch (erro) {
+        contextoAudio = null;
+    }
+}
+
+function tocarAlarme() {
+    if (contextoAudio) {
+        try {
+            const agora = contextoAudio.currentTime;
+            [0, 0.45, 0.9].forEach((atraso) => {
+                const oscilador = contextoAudio.createOscillator();
+                const ganho = contextoAudio.createGain();
+                oscilador.frequency.value = 880;
+                oscilador.connect(ganho);
+                ganho.connect(contextoAudio.destination);
+                ganho.gain.setValueAtTime(0.25, agora + atraso);
+                ganho.gain.exponentialRampToValueAtTime(0.001, agora + atraso + 0.3);
+                oscilador.start(agora + atraso);
+                oscilador.stop(agora + atraso + 0.3);
+            });
+        } catch (erro) {
+            // Sem som disponível: o alerta visual continua
+        }
+    }
+    if (navigator.vibrate) navigator.vibrate([300, 200, 300, 200, 300]);
+}
+
+function horaCurta(iso) {
+    const data = new Date(iso);
+    return Number.isNaN(data.getTime()) ? '--' : data.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+}
+
+function formatarTempo(ms) {
+    const total = Math.max(0, Math.ceil(ms / 1000));
+    const minutos = Math.floor(total / 60);
+    const segundos = total % 60;
+    return `${String(minutos).padStart(2, '0')}:${String(segundos).padStart(2, '0')}`;
+}
+
+function mostrarStatusCronometro(texto) {
+    el('cron-status').textContent = texto;
+}
+
+function iniciarSemeadura() {
+    garantirAudio();
+    const minutos = duracaoConfigurada('cron-dur-semeadura', 2);
+    const agora = Date.now();
+
+    cronometros.semeadura = { estado: 'contando', alvo: agora + minutos * 60000 };
+    cronometros.lavagem = { estado: 'parado', alvo: 0, inicio: 0, duracaoMin: 0 };
+    cronometros.horaSemeadura = new Date(agora).toISOString();
+    cronometros.horaLavagem = null;
+    alarmeSemeaduraTocado = false;
+    alarmeLavagemTocado = false;
+
+    salvarCronometros();
+    atualizarCronometros();
+    agendarAutoSalvar();
+}
+
+function cancelarSemeadura() {
+    cronometros.semeadura = { estado: 'parado', alvo: 0 };
+    salvarCronometros();
+    atualizarCronometros();
+}
+
+/** Resposta do operador: "Sim" libera a lavagem; "Não" permite refazer a semeadura. */
+function responderCristais(visivel) {
+    el('obs-semente-visivel').value = visivel ? 'sim' : 'nao';
+    cronometros.semeadura = { estado: visivel ? 'confirmada' : 'parado', alvo: 0 };
+    mostrarStatusCronometro(visivel
+        ? 'Semente confirmada. Abra a água para iniciar a lavagem.'
+        : 'Semente não confirmada. Você pode injetar novamente.');
+    salvarCronometros();
+    atualizarCronometros();
+    agendarAutoSalvar();
+}
+
+function iniciarLavagem() {
+    if (cronometros.semeadura.estado !== 'confirmada') return;
+    garantirAudio();
+
+    const minutos = duracaoConfigurada('cron-dur-lavagem', 45);
+    const agora = Date.now();
+    cronometros.lavagem = { estado: 'contando', alvo: agora + minutos * 60000, inicio: agora, duracaoMin: minutos };
+    cronometros.horaLavagem = new Date(agora).toISOString();
+    alarmeLavagemTocado = false;
+
+    salvarCronometros();
+    atualizarCronometros();
+    agendarAutoSalvar();
+}
+
+/** Cancela a lavagem e registra o tempo que realmente decorreu. */
+function cancelarLavagem() {
+    const decorridoMin = Math.round((Date.now() - cronometros.lavagem.inicio) / 60000);
+    el('obs-tempo-lavagem').value = decorridoMin;
+    cronometros.lavagem = { estado: 'parado', alvo: 0, inicio: 0, duracaoMin: 0 };
+    salvarCronometros();
+    atualizarCronometros();
+    agendarAutoSalvar();
+}
+
+function atualizarBotoesCronometro() {
+    const s = cronometros.semeadura;
+    const l = cronometros.lavagem;
+
+    el('btn-semeadura-iniciar').disabled = s.estado !== 'parado';
+    el('btn-semeadura-cancelar').hidden = s.estado !== 'contando';
+    el('cron-pergunta').hidden = s.estado !== 'aguardando';
+
+    el('btn-lavagem-iniciar').disabled = !(s.estado === 'confirmada' && l.estado === 'parado');
+    el('btn-lavagem-cancelar').hidden = l.estado !== 'contando';
+
+    el('cron-semeadura').classList.toggle('alerta', s.estado === 'aguardando');
+    el('cron-lavagem').classList.toggle('alerta', l.estado === 'concluido');
+}
+
+/** Chamada a cada 250 ms: avança os estados pelo horário e atualiza a tela. */
+function atualizarCronometros() {
+    const agora = Date.now();
+    const s = cronometros.semeadura;
+    const l = cronometros.lavagem;
+    let mudou = false;
+
+    if (s.estado === 'contando' && agora >= s.alvo) {
+        s.estado = 'aguardando';
+        mudou = true;
+        if (!alarmeSemeaduraTocado) {
+            alarmeSemeaduraTocado = true;
+            tocarAlarme();
+            mostrarStatusCronometro('Semeadura concluída: cristais visíveis?');
+        }
+    }
+
+    if (l.estado === 'contando' && agora >= l.alvo) {
+        l.estado = 'concluido';
+        mudou = true;
+        el('obs-tempo-lavagem').value = l.duracaoMin;
+        if (!alarmeLavagemTocado) {
+            alarmeLavagemTocado = true;
+            tocarAlarme();
+            mostrarStatusCronometro('Lavagem concluída: feche a água.');
+        }
+        agendarAutoSalvar();
+    }
+
+    if (mudou) salvarCronometros();
+
+    el('cron-semeadura-tempo').textContent = s.estado === 'contando'
+        ? formatarTempo(s.alvo - agora)
+        : s.estado === 'aguardando' ? '00:00'
+        : formatarTempo(duracaoConfigurada('cron-dur-semeadura', 2) * 60000);
+
+    el('cron-lavagem-tempo').textContent = l.estado === 'contando'
+        ? formatarTempo(l.alvo - agora)
+        : l.estado === 'concluido' ? '00:00'
+        : formatarTempo(duracaoConfigurada('cron-dur-lavagem', 45) * 60000);
+
+    atualizarBotoesCronometro();
+}
+
+function vincularCronometros() {
+    carregarCronometros();
+
+    el('btn-semeadura-iniciar').addEventListener('click', iniciarSemeadura);
+    el('btn-semeadura-cancelar').addEventListener('click', cancelarSemeadura);
+    el('btn-cristais-sim').addEventListener('click', () => responderCristais(true));
+    el('btn-cristais-nao').addEventListener('click', () => responderCristais(false));
+    el('btn-lavagem-iniciar').addEventListener('click', iniciarLavagem);
+    el('btn-lavagem-cancelar').addEventListener('click', cancelarLavagem);
+
+    atualizarCronometros();
+    setInterval(atualizarCronometros, 250);
+}
+
+/* ==========================================================================
+   Inicialização
+   ========================================================================== */
+
+function vincularEventos() {
+    PARES_SINCRONIZADOS.forEach(([idNumero, idRange]) => {
+        const numero = el(idNumero);
+        const range = el(idRange);
+
+        // Digitação: atualiza o slider e recalcula
+        numero.addEventListener('input', () => {
+            range.value = numero.value;
+            aoAlterarEntrada();
+        });
+
+        // Ao sair do campo: aplica os limites e normaliza o valor exibido
+        numero.addEventListener('change', () => {
+            numero.value = lerNumero(idNumero);
+            range.value = numero.value;
+            aoAlterarEntrada();
+        });
+
+        // Slider: atualiza o campo numérico e recalcula
+        range.addEventListener('input', () => {
+            numero.value = range.value;
+            aoAlterarEntrada();
+        });
+    });
+
+    el('historico-lista').addEventListener('click', (evento) => {
+        const botao = evento.target.closest('.historico-excluir');
+        if (!botao) return;
+
+        if (botao.dataset.confirmando === 'sim') {
+            excluirRegistro(Number(botao.dataset.indice));
+        } else {
+            pedirConfirmacao(botao, '⚠ Confirmar exclusão', '🗑 Excluir');
+        }
+    });
+
+    el('btn-pasta').addEventListener('click', conectarPasta);
+    el('btn-backup').addEventListener('click', exportarBackup);
+    el('btn-importar').addEventListener('click', () => el('input-importar').click());
+    el('input-importar').addEventListener('change', importarBackup);
+
+    vincularPainelMensal();
+    vincularObservacoes();
+    vincularCronometros();
+    vincularModalGrafico();
+    el('btn-salvar').addEventListener('click', salvarProcessoAtual);
+    el('btn-csv').addEventListener('click', exportarCSV);
+    el('btn-email').addEventListener('click', enviarPorEmail);
+    el('btn-limpar').addEventListener('click', limparHistorico);
+}
+
+vincularEventos();
+atualizar();
+renderizarHistorico();
+iniciarArmazenamento();
+
+</script>
+    <script>
+        // Registra o service worker: necessário para o Chrome liberar a instalação do app
+        if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js').catch(() => {
+                    // Sem service worker, o painel funciona normalmente, só não instala
+                });
+            });
+        }
+    </script>
+</body>
+</html>
